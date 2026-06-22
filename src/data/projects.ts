@@ -116,6 +116,24 @@ export const projects: Project[] = [
     githubFrontendUrl:"https://github.com/WebMatrix-Technology/WebMatrix-landing-page",
     githubBackendUrl: "https://github.com/WebMatrix-Technology/WebMatrix-Backend",
   },
+  {
+    id: 7,
+    title: "All-in-One Tools",
+    description: "Co-developed a versatile multi-tool utility web application as part of a two-developer team, delivering a centralized hub for productivity, conversion, and financial tools.",
+    techStack: ["Next.js", "TypeScript"],
+    features: [
+      "Computation utilities including Age, EMI, Split Bill, and GST Calculators",
+      "Developer tools like JSON Formatter, Password Generator, and Meta Tag Generator",
+      "Asset processors including an Image Compressor and a client-side PDF Merger",
+      "Localized front-end tools like QR Code Generator and Color Palette generator",
+      "Reusable UI dashboard foundations tied into a global theme toggle system"
+    ],
+    fullDescription: "Co-developed a versatile multi-tool utility web application as part of a two-developer team, delivering a centralized hub for productivity, conversion, and financial tools. Designed and built specialized computation utilities including an Age Calculator, EMI Calculator, Split Bill calculator, and GST Calculator. Developed developer-focused productivity tools such as a JSON Formatter, a custom Password Generator, and a programmatic Meta Tag Generator.\n\nEngineered multi-format asset file processors, including an interactive Image Compressor and a client-side PDF Merger utility. Programmed localized front-end tools including a Dynamic QR Code Generator, a Word Counter, and a dynamic Color Palette generator. Co-authored client-side security and history tracking architectures by implementing custom authentication actions and persistent tool usage logs. Designed and implemented reusable UI dashboard foundations, constructing custom Select, DatePicker, TimePicker, and ColorPicker inputs tied into a global theme toggle system.",
+    image: "/tools.png",
+    liveUrl: "https://all-in-one-tools-nine.vercel.app/",
+    githubUrl: "https://github.com/Shubs-m7/All-in-One-Tools",
+
+  },
 ];
 
 export function getProjectById(id: string | number): Project | undefined {
