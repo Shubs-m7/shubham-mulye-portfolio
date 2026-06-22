@@ -1,10 +1,13 @@
+"use client";
+
 import { Building2, Calendar, ArrowUpRight } from "lucide-react";
+
 import { motion } from "framer-motion";
 
 const experiences = [
   {
     company: "WebMatrix",
-    role: "Freelance Developer",
+    role: "SaaS Developer",
     period: "Nov 2025 – Present",
     type: "Freelance",
     description: "Delivering scalable, production-ready web solutions for diverse clients.",
@@ -68,8 +71,11 @@ const achievementVariants = {
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 md:py-32 relative">
-      <div className="container mx-auto px-6">
+    <section id="experience" className="py-24 md:py-32 relative overflow-hidden bg-transparent">
+      {/* Decorative Blurs */}
+      <div className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <motion.div 
@@ -77,14 +83,13 @@ const Experience = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="mb-16"
+            className="mb-16 text-center md:text-left"
           >
-            <span className="text-primary text-sm font-medium tracking-wider uppercase mb-4 block">
+            <span className="text-primary text-sm font-bold tracking-widest uppercase mb-4 block drop-shadow-[0_0_10px_rgba(30,209,229,0.8)]">
               Experience
             </span>
             <h2 className="section-heading mb-6">
-              Where I've<br />
-              <span className="text-muted-foreground">Made an Impact</span>
+              Where I've <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Made an Impact</span>
             </h2>
           </motion.div>
 
@@ -96,7 +101,7 @@ const Experience = () => {
               whileInView={{ scaleY: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-primary/50 to-transparent" 
+              className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-blue-500/50 to-transparent" 
             />
 
             <motion.div 
@@ -120,18 +125,18 @@ const Experience = () => {
                     transition={{ delay: 0.2, type: "spring", stiffness: 300 }}
                     className={`absolute left-0 md:left-8 -translate-x-1/2 w-4 h-4 rounded-full border-2 ${
                       exp.current 
-                        ? "bg-primary border-primary shadow-[0_0_20px_4px_hsl(var(--primary)/0.4)]" 
+                        ? "bg-primary border-primary shadow-[0_0_20px_4px_hsl(187,85%,53%,0.6)]" 
                         : "bg-background border-primary/50"
                     }`} 
                   />
 
                   <motion.div 
-                    whileHover={{ y: -5 }}
-                    transition={{ duration: 0.3 }}
-                    className="card-glass rounded-2xl p-8"
+                    className="glass-panel rounded-3xl p-8 glass-panel-hover relative overflow-hidden group"
                   >
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
                     {/* Header */}
-                    <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
+                    <div className="flex flex-wrap items-start justify-between gap-4 mb-6 relative z-10">
                       <div>
                         <div className="flex items-center gap-3 mb-2">
                           <div className="p-2 rounded-lg bg-primary/10">

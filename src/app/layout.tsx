@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Shubham Mulye | MERN Stack Developer",
@@ -30,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen bg-background font-sans antialiased">
+    <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
+      <body className={`min-h-screen bg-background font-sans antialiased ${inter.variable}`}>
         <Providers>{children}</Providers>
       </body>
     </html>

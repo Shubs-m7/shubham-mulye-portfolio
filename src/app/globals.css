@@ -1,8 +1,7 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
@@ -68,8 +67,10 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    @apply text-foreground font-sans antialiased;
+    background: radial-gradient(circle at 50% 0%, hsl(222 47% 8%) 0%, hsl(222 47% 2%) 100%);
+    background-attachment: fixed;
+    font-family: var(--font-inter), system-ui, sans-serif;
   }
 
   ::selection {
@@ -91,39 +92,21 @@
     box-shadow: var(--shadow-glow);
   }
 
-  .card-glass {
-    @apply bg-card/50 backdrop-blur-xl border border-border/50;
-    background: var(--gradient-card);
+  .glass-panel {
+    @apply bg-white/[0.02] backdrop-blur-2xl border border-white/[0.05];
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-panel-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_8px_32px_0_rgba(30,209,229,0.2)];
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl font-bold tracking-tight;
+    @apply text-3xl md:text-5xl font-bold tracking-tight mb-4;
   }
 
   .section-subheading {
-    @apply text-muted-foreground text-lg max-w-2xl;
-  }
-
-  .hover-lift {
-    @apply transition-all duration-300 ease-out;
-  }
-
-  .hover-lift:hover {
-    @apply -translate-y-1;
-    box-shadow: var(--shadow-card);
-  }
-
-  .nav-link {
-    @apply relative text-muted-foreground hover:text-foreground transition-colors duration-200;
-  }
-
-  .nav-link::after {
-    content: '';
-    @apply absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all duration-300;
-  }
-
-  .nav-link:hover::after {
-    @apply w-full;
+    @apply text-muted-foreground text-lg md:text-xl max-w-2xl mb-12;
   }
 }
 

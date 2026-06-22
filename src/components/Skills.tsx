@@ -1,3 +1,5 @@
+"use client";
+
 import { 
   Server, 
   Layout, 
@@ -5,6 +7,7 @@ import {
   Layers
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
 
 const skillCategories = [
   {
@@ -70,9 +73,10 @@ const skillTagVariants = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 md:py-32 relative bg-secondary/20">
+    <section id="skills" className="py-24 md:py-32 relative bg-transparent overflow-hidden">
       {/* Background Accent */}
-      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-primary/5 rounded-full blur-[150px]" />
+      <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -84,11 +88,11 @@ const Skills = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="text-primary text-sm font-medium tracking-wider uppercase mb-4 block">
+            <span className="text-primary text-sm font-bold tracking-widest uppercase mb-4 block drop-shadow-[0_0_10px_rgba(30,209,229,0.8)]">
               Skills & Expertise
             </span>
             <h2 className="section-heading mb-6">
-              Technologies I Work With
+              Technologies I <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Work With</span>
             </h2>
             <p className="section-subheading mx-auto">
               A comprehensive toolkit for building modern, scalable web applications from concept to deployment.
@@ -101,15 +105,16 @@ const Skills = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
-            className="grid md:grid-cols-2 gap-6"
+            className="grid md:grid-cols-2 gap-8"
           >
             {skillCategories.map((category, index) => (
               <motion.div
                 key={category.title}
                 variants={cardVariants}
-                className="card-glass rounded-2xl p-8 hover-lift group"
+                className="glass-panel rounded-3xl p-8 glass-panel-hover group relative overflow-hidden"
               >
-                <div className="flex items-start gap-5">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="flex items-start gap-6 relative z-10">
                   <motion.div 
                     className={`p-4 rounded-xl bg-gradient-to-br ${category.gradient} border border-border/50`}
                     whileHover={{ scale: 1.1, rotate: 5 }}
