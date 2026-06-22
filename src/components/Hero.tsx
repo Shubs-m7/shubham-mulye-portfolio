@@ -90,8 +90,8 @@ const Hero = () => {
               <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest">Connect</span>
               <div className="h-px w-12 bg-white/20" />
               {[
-                { icon: Github, href: "https://github.com/shubham-mulye" },
-                { icon: Linkedin, href: "https://linkedin.com/in/shubham-mulye" },
+                { icon: Github, href: "https://github.com/Shubs-m7" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/shubham-mulye-683672370/" },
                 { icon: Mail, href: "mailto:shubs.7m@gmail.com" }
               ].map((social, i) => (
                 <a 
