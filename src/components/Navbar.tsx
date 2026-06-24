@@ -9,7 +9,7 @@ const navLinks = [
   { label: "About", href: "/#about", icon: User },
   { label: "Skills", href: "/#skills", icon: TerminalSquare },
   { label: "Experience", href: "/#experience", icon: Briefcase },
-  { label: "Projects", href: "/#projects", icon: Folder },
+  { label: "Projects", href: "/projects", icon: Folder },
   { label: "Contact", href: "/#contact", icon: Mail },
 ];
 
@@ -42,7 +42,7 @@ const Navbar = () => {
           }`}
         >
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group relative z-10">
+          <a href="/" className="flex items-center gap-2 group relative z-10">
             <img 
               src={imgSrc} 
               alt="Logo" 

@@ -14,16 +14,12 @@ export const metadata: Metadata = {
     title: "Shubham Mulye | MERN Stack Developer",
     description: "Full-Stack Developer turning ideas into production-ready products.",
     type: "website",
-    images: [
-      {
-        url: "https://lovable.dev/opengraph-image-p98pqg.png",
-      },
-    ],
+    images: [],
   },
   twitter: {
     card: "summary_large_image",
     site: "@shubhammulye",
-    images: ["https://lovable.dev/opengraph-image-p98pqg.png"],
+    images: [],
   },
 };
 

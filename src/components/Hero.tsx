@@ -70,7 +70,7 @@ const Hero = () => {
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5 mb-12"
             >
               <Button size="lg" className="w-full sm:w-auto h-14 px-8 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_rgba(30,209,229,0.5)] transition-all hover:scale-105 group" asChild>
-                <a href="#projects" className="text-base font-semibold flex items-center justify-center">
+                <a href="/projects" className="text-base font-semibold flex items-center justify-center">
                   View My Work
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
